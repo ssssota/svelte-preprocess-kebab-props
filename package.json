@@ -1,0 +1,37 @@
+{
+	"name": "svelte-preprocess-kebab-props",
+	"version": "0.1.0",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"default": "./dist/index.js"
+	},
+	"files": ["dist"],
+	"scripts": {
+		"test": "vitest",
+		"fmt": "biome check --write .",
+		"check": "biome check .",
+		"build": "tsc --project tsconfig.lib.json",
+		"clean": "node -e 'fs.rmSync(`dist`, {recursive:true,force:true})'",
+		"prepare": "npm run clean && npm run build"
+	},
+	"keywords": ["svelte", "preprocess", "kebab", "props"],
+	"author": "TOMIKAWA Sotaro",
+	"license": "MIT",
+	"description": "",
+	"packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"svelte": "^5.15.0",
+		"typescript": "^5.7.2",
+		"vitest": "^2.1.8"
+	},
+	"peerDependencies": {
+		"svelte": ">=5.0.0"
+	},
+	"dependencies": {
+		"magic-string": "^0.30.17"
+	}
+}
